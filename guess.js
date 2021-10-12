@@ -37,6 +37,8 @@ while (restartGame){
         rangeNum = parseInt(rangeNum);
     }
 
+    // Creates the random number using the range entered by the user
+    randomNum = Math.floor(Math.random() * rangeNum) + 1;
 
     break;
 }
