@@ -84,5 +84,26 @@ while (restartGame){
         }
     }
 
-    break;
+    // Prompts user with option to play again
+    playAgain = prompt(`Would you like to paly again? Y for yes. N for no.`);
+
+    // Loop continues until the user submits a valid response
+    while (true){
+        // Checks if the user's response is no/N
+        if (playAgain.toUpperCase() === "N"){
+            // Alerts the user that the game is over and the game/loop does NOT restart
+            alert("Thanks for playing!");
+            restartGame = false;
+            break;
+
+            // Checks if the user's response is YES/Y or y.
+        } else if (playAgain.toUpperCase() === "Y"){
+            // The game restarts
+            break;
+            
+            // 
+        } else {
+            playAgain = prompt(`Please enter Y or N`);
+        }
+    }
 }
