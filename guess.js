@@ -53,6 +53,13 @@ while (restartGame){
 
     // Continues looping until the user guesses the correct number or runs out of attempts. Loops until a break keyword is ran
     while (true){
+        // Displays the number/answer when a code word is entered
+        if (guess === `Valley Forge`) {
+            alert(`The number is ${randomNum}`);
+            // Prompts the user to enter another guess
+            guess = prompt(`Please enter a guess from 1 to ${rangeNum}. You have ${attempts} attempt(s) left:`);
+        }
+
         // Attempts to convert the user's guess into a number
         guess = parseInt(guess);
 
@@ -101,7 +108,7 @@ while (restartGame){
             // The game restarts
             break;
             
-            // 
+            // Prompts the user to enter a valid response and start this loop again
         } else {
             playAgain = prompt(`Please enter Y or N`);
         }
